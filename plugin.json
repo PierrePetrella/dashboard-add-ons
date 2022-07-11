@@ -1,16 +1,16 @@
 {
-    "id": "your-plugin-id",
+    "id": "dashboard-add-ons",
     "version": "0.1.0",
     "meta": {
-        "label": "Plugin template - Replace by your plugin label",
-        "category": "Your category (optional)",
-        "description": "Your description (keep it short and simple)",
-        "author": "Organization (firstName LASTNAME)",
-        "icon": "icon-font-awesome-3.2.1",
+        "label": "Dashboard enhancers",
+        "category": "Dashboard enhancers",
+        "description": "Contains component to enhance Dashboard",
+        "author": "Dataiku (Pierre PETRELLA)",
+        "icon": "icon-dashboard",
         "licenseInfo": "Apache Software License",
-        "url": "https://www.dataiku.com/product/plugins/your-plugin-id/",
+        "url": "https://www.dataiku.com/product/plugins/dashboard-add-ons/",
         "tags": [
-            "myTag"
+            "webapps", "dashboard", "variables"
         ],
         "supportLevel": "NOT_SUPPORTED"
     }
