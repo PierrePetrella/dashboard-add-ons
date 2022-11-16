@@ -96,6 +96,6 @@ def local_update(btn, variable, value_update):
         original_val,
         value_update
     )
-    new_std = json.dumps(v["local"], sort_keys=True, indent=4)
+    new_local = json.dumps(v["local"], sort_keys=True, indent=4)
     print (update_info)
     return update_info , new_local
