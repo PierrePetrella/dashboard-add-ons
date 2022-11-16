@@ -84,7 +84,6 @@ def std_update(btn, variable, value_update):
     State('local-input-text', 'value')
 )
 def local_update(btn, variable, value_update):
-    print ("in update_info")
     global v
     v = project.get_variables()
     original_val = v['local'][variable]
@@ -97,5 +96,4 @@ def local_update(btn, variable, value_update):
         value_update
     )
     new_local = json.dumps(v["local"], sort_keys=True, indent=4)
-    print (update_info)
     return update_info , new_local
