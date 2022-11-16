@@ -18,7 +18,7 @@ project = client.get_default_project()
 v = project.get_variables()
 
 app.layout = html.Div(children=[
-    html.H1(children='Update Project Variables'),
+    html.H2(children='Update Project Variables'),
     
     html.H3(children='Global Project Variables'),
     html.Plaintext(json.dumps(v["standard"], sort_keys=True, indent=4), id="std-txt"),
@@ -60,6 +60,7 @@ app.layout = html.Div(children=[
     State('std-input-text', 'value')
 )
 def std_update(btn, variable, value_update):
+    global v
     v = project.get_variables()
     original_val = v['standard'][variable]
     v['standard'][variable] = value_update
@@ -83,6 +84,8 @@ def std_update(btn, variable, value_update):
     State('local-input-text', 'value')
 )
 def local_update(btn, variable, value_update):
+    print ("in update_info")
+    global v
     v = project.get_variables()
     original_val = v['local'][variable]
     v['local'][variable] = value_update
@@ -94,5 +97,5 @@ def local_update(btn, variable, value_update):
         value_update
     )
     new_std = json.dumps(v["local"], sort_keys=True, indent=4)
-    
+    print (update_info)
     return update_info , new_local
